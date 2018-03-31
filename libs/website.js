@@ -31,7 +31,6 @@ module.exports = function(logger){
 
     var logSystem = 'Website';
 
-
     var pageFiles = {
         'index.html': 'index',
         'home.html': '',
