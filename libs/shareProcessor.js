@@ -1,4 +1,4 @@
-var redis = require('redis');
+tvar redis = require('redis');
 var Stratum = require('stratum-pool');
 
 
@@ -30,7 +30,7 @@ module.exports = function(logger, poolConfig){
     if (redisConfig.password) {
         connection.auth(redisConfig.password);
     }
-    redisClient.select(redisConfig.db);
+    connection.select(redisConfig.db);
     connection.on('ready', function(){
         logger.debug(logSystem, logComponent, logSubCat, 'Share processing setup with redis (' + redisConfig.host +
             ':' + redisConfig.port  + ')');
